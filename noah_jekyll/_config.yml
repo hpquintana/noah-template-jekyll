@@ -1,6 +1,6 @@
 sass:
   style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+permalink: pretty
 excerpt_separator: <!-- more --> # Marks end of excerpt in posts
 timezone: America/Denver
 
@@ -26,13 +26,15 @@ plugins:
 - jemoji
 
 # Gem settings
-pagination: 
-  debug: false
+pagination:
+  enabled: true
   collection: 'posts'
-  per_page: 5 # jekyll-paginate-v2 > items per page
-  permalink: '/page/:num' # jekyll-paginate-v2 > blog page
-  limit: 0 # Limit how many pagenated pages to create (default: 0, means all)
-  sort_field: 'date' # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  per_page: 3
+  permalink: "/page/:num/"
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
   
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
@@ -96,10 +98,7 @@ collections:
   posts:
     title: Posts # Needed for Siteleaf
     output: true
-    #description: "My thoughts and ideas" # The post list page content
-    feature_text: "Dream On"
-    feature_image: /assets/img/gallery/main.jpeg
-    feature_url: https://youtu.be/3-2u2lhGO4w
-  work:
-    title: Previous Work
+  portfolio:
+    title: Portfolio
     output: true
+    permalink: /:collection/:title/

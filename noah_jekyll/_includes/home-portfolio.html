@@ -1,5 +1,5 @@
 
-{% if site.work %}
+{% if site.portfolio %}
 <div id="colorlib-work">
     <div class="container">
         <div class="row text-center">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="row">
-            {% for work in site.work limit: 4 %}
+            {% for work in site.portfolio limit: 4 %}
                 <div class="col-md-12">
                     <div class="work-entry animate-box">
                         {% if work.featured_image %}

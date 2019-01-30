@@ -1,0 +1,10 @@
+.nav-next-prev span {
+    color: black!important;
+}
+
+.img-cover {
+    max-height: 33vh;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
